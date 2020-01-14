@@ -2,9 +2,8 @@ import React from "react";
 import propTypes from "prop-types";
 import ForumCard from "./ForumCard";
 import * as forumService from "../../services/forumService";
-import logger from "debug";
-
-const _logger = logger.extend("Thread");
+import logger from "sabio-debug";
+const _logger = logger.extend("SabioInit");
 export default class Thread extends React.Component {
   state = {
     posts: [],
@@ -31,6 +30,9 @@ export default class Thread extends React.Component {
   getThreadByIdFail = payload => {
     _logger(payload);
   };
+  backToForums = () => {
+    this.props.history.push("/forum");
+  };
   forumCardTemplate = thread => {
     return (
       <ForumCard
@@ -44,6 +46,15 @@ export default class Thread extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <div className="container">
+          <div className="row mb-3">
+            <div className="col">
+              <button className="btn btn-success" onClick={this.backToForums}>
+                Back to Forums
+              </button>
+            </div>
+          </div>
+        </div>
         <div className="container">
           <div className="row">{this.state.topic}</div>
         </div>
