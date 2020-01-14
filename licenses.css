@@ -1,0 +1,42 @@
+.license.card-body {
+  background: #fff;
+  border-radius: 5px;
+  text-align: center !important;
+  padding-bottom: 0;
+}
+.license .btn {
+  margin-right: 20px;
+}
+.license .card-title {
+  margin: 0;
+}
+.new-license {
+  margin-bottom: 30px;
+}
+.paginate {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  margin-top: 3%;
+}
+.rc-pagination {
+  display: inline-block;
+  margin: auto;
+}
+.license-card-button-row .btn {
+  width: 100%;
+}
+.license-card-button-row {
+  padding-top: 20px;
+}
+.center {
+  text-align: center;
+}
+.search {
+  width: 30%;
+  float: right;
+  margin-left: 5%;
+}
+.top-row {
+  margin-bottom: 25px;
+}
