@@ -1,6 +1,6 @@
 import React from "react";
 import * as forumService from "../../services/forumService";
-import logger from "debug";
+import logger from "sabio-debug";
 import ForumCard from "./ForumCard";
 import propTypes from "prop-types";
 import Pagination from "rc-pagination";
@@ -9,7 +9,7 @@ import "./forum.css";
 import * as authService from "../../services/authService";
 import swal from "sweetalert2";
 
-const _logger = logger.extend("Forums");
+const _logger = logger.extend("SabioInit");
 
 export default class Forums extends React.Component {
   state = {
@@ -105,7 +105,6 @@ export default class Forums extends React.Component {
     this.deleteThreadById(thread);
   };
   getThreadByIdFail = payload => {
-    debugger;
     _logger(payload);
   };
   createNewThread = thread => {
