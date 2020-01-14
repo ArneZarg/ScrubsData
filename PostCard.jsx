@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReplyCard from "./ReplyCard";
 import * as replyservice from "../../services/forumService";
-import logger from "sabio";
+import logger from "sabio-debug";
 import "./forum.css";
 
-const _logger = logger.extend("PostCard");
+const _logger = logger.extend("SabioInit");
 
 class PostCard extends React.Component {
   state = {
